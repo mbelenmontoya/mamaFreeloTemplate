@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head todo la info que es para el navegador y no se ve, salvo el titulo. -->
+    <meta charset="UTF-8">
+    <title>Template de prueba</title>
+    <!-- Estilos de Bootstrap que es codigo responsive y visual ya escrito por otro. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- codigo de colores y estilos escrito por nosotros -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Tipografia openSans -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <!-- esto es para que el navegador se de cuenta cuando estamos en un celuar o tableta-->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <!-- iconos para el sitio de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!-- <body> Todo lo que se ve en la pantalla del usuario -->
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row top">
+                <!-- en esta linea cambiamos nuestro logo. -->
+                <div class="col-md-4">
+                    <a href="#home" data-ancla="home" class="off">
+                        <img src="https://picsum.photos/40" alt="" class="logo"></a></div>
+                <div class="col-md-3"></div>
+                <div class="col-md-5">
+                    <ul class='botonera'>
+                        <li><a href="#nosotros" data-ancla="nosotros">boton 1</a></li>
+                        <li><a href="#servicios" data-ancla="servicios">boton 2</a></li>
+                        <li><a href="#contacto" data-ancla="contacto">boton 3</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="principal vertical-centered-text" id="home">
+        <div class="col-md-8 cta">
+            <h1>Lorem ipsun</h1>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h4>
+            <p>usce sit amet leo id odio vestibulum efficitur. Integer vel ex sit amet turpis dictum fringilla sit amet
+                et libero. Maecenas vitae placerat ligula, at porttitor mauris. </p>
+            <a href="#" class="btn btn-primary blue">BOTON QUE VA A ALGUN LADO</a>
+
+
+        </div>
+    </div>
+
+    <div class="nosotros blue" id="nosotros">
+        <div class="container">
+            <h1>Lorem ipsuns</h1>
+            <p> vestibulum efficitur. Integer vel ex sit amet turpis dictum fringilla sit amet et libero. Maecenas vitae
+                placerat ligula, at porttitor mauris. Sed vitae volutpat eros. Nullam iaculis, lacus at aliquam aliquet,
+                nulla augue maximus diam, a dapibus tellus nunc quis arcu.
+
+            </p>
+        </div>
+    </div>
+
+
+    <div class="container servicios" id="servicios">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Lorem ipsun</h1>
+            </div>
+        </div>
+        <div class="row images">
+            <div class="col-md-3">
+                <i class="fa fa-car fa-4x"></i>
+                <h3>Lorem ipsun</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-car fa-4x"></i>
+                <h3>Lorem ipsun</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-car fa-4x"></i>
+                <h3>Lorem ipsun</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-car fa-4x"></i>
+                <h3>Lorem ipsun</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container" id="contacto">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>CONTACTO</h1>
+                </div>
+            </div>
+            <div class="row social">
+                <div class="col-4">
+                    <a href="#">
+                        <i class="fa fa-check-square fa-5x"></i>
+                    </a></div>
+
+                <div class="col-4">
+                    <a href="" target="_blank">
+                        <i class="fa fa-check-square fa-5x"></i>
+                    </a></div>
+
+
+                <div class="col-4">
+                    <a target="_blank" href="">
+                        <i class="fa fa-check-square fa-5x"></i>
+                    </a></div>
+            </div>
+    </footer>
+    <!-- Codigo que hace que las acciones de botones y cuestiones responsive funcionen-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"
+        integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4"
+        crossorigin="anonymous"></script>
+    <script>
+        // A $( document ).ready() block.
+        $(document).ready(function () {
+            $('.top a').click(function (e) {
+                e.preventDefault();
+                var offset = $($(this).attr('href')).offset().top;
+                $('html, body').animate({ scrollTop: offset }, 600);
+                return false;
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>
